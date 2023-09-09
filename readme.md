@@ -16,8 +16,8 @@ This is an API Service responsible for exposing "the air quality information" of
 ![Alt text](https://github.com/mostafaSalah12/air_quality/blob/master/docs/architecture.png "air quality architecture")
 
 The App consist of:
-- **Core NodeJs Service** built using **Fastify** framework.
-_ **iqair API Service** which provides the air quality data.
+- **Core NodeJs Service** is built using **Fastify** framework.
+- **iqair API Service** which provides the air quality data.
 - **Mongo DB** which is responsible for storing the data. 
 
 API Service is built with **Fastify**, a web framework that supports plugin architecture. It is inspired by Hapi and Express. There is one main module in the Service, which is the **Air Quality Module (Core)**. This module is responsible for fetching data from the **iqair API Service**, exposing API endpoints and handling business logic.

@@ -56,6 +56,7 @@ app
 ### Using NodeJs
 
 - Clone the repo
+- Rename **.env.example** to **.env**
 - make sure you have **mongo db** installed and running on port **27017**
 - Run `npm install` in the root directory
 - Add the API Key sent in the email to .env file in **IQAIR_API_KEY** environment variable

@@ -38,7 +38,6 @@ app
     - **Config** (Config Utility for loading environment variables)
 - **Plugins** (App Plugins)
     - **Swagger** (Swagger Plugin)
-    - **Not Found** (Handle Not Found Routes)
     - **Error** (Handle Errors)
 - **app.js** (App Entry Point)
 - **server.js** (Server Configuration Point)

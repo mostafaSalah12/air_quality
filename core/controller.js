@@ -10,7 +10,7 @@ async function getCityAirQuality(latitude, longitude) {
       message: 'Error getting air quality',
       data: airQuality
     })
-    throw new Error(`Error getting air quality: ${JSON.stringify(airQuality)}`)
+    Faults.throw('Error getting air quality', 500)
   }
   const { pollution } = airQuality.data.current
   const { ts, aqius, mainus, aqicn, maincn } = pollution

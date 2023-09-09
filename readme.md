@@ -13,7 +13,7 @@ This is an API Service responsible for exposing "the air quality information" of
 
 ## Architecture Overview
 
-![Alt text](https://github.com/ "iqair architecture")
+![Alt text](https://github.com/mostafaSalah12/air_quality/blob/master/docs/architecture.png "air quality architecture")
 
 The App consist of:
 - **Core NodeJs Service** built using **Fastify** framework.
@@ -78,7 +78,7 @@ All URIs are relative to *http://localhost:3000*
 
 Name  | HTTP request | Method |Description
 ------------ | ------------- | ------------- | -------------
-*Get Pollution Nearest City* | /api/pollution/nearest_city | GET | Get the air quality information of the nearest city to GPS coordinates
+*Get Pollution Nearest City* | /api/pollution/nearest_city?lat=0&lon=0 | GET | Get the air quality information of the nearest city to GPS coordinates
 *Get Paris Pollution* | /api/pollution/paris | Get | Get the air quality information of Paris city every 1 minute using a cron job
 
 

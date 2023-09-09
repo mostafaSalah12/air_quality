@@ -79,7 +79,8 @@ All URIs are relative to *http://localhost:3000*
 Name  | HTTP request | Method |Description
 ------------ | ------------- | ------------- | -------------
 *Get Pollution Nearest City* | /api/pollution/nearest_city?lat=0&lon=0 | GET | Get the air quality information of the nearest city to GPS coordinates
-*Get Paris Pollution* | /api/pollution/paris | Get | Get the air quality information of Paris city every 1 minute using a cron job
+*Get Paris Pollution* | /api/pollution/paris | GET | Endpoint to get datetime( date and time ) where the paris
+zone is the most polluted ( based on your CRON JOB results).
 
 
 The API Documentation is generated using **Swagger** and can be accessed using the following link:

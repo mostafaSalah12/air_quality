@@ -5,9 +5,7 @@ services:
     restart: always
     build: .
     ports:
-      - '3000:3000'
-    links:
-      - mongo
+      - 3000:3000
     environment:
       - MONGODB_URI=mongodb://mongo:27017/air-quality
       - PORT=3000
@@ -24,7 +22,7 @@ services:
     volumes:
       - ./data:/data/db
     ports:
-      - '27017:27017'
+      - 27017:27017
 
 volumes:
   data:

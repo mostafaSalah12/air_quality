@@ -1,0 +1,41 @@
+{
+  "extends": ["standard"],
+  "parser": "babel-eslint",
+  "plugins": [
+    "standard",
+    "promise",
+    "node",
+    "import"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "camelcase": "off",
+    "one-var": "off",
+    "indent": ["warn", 2, { "VariableDeclarator": {"var": 2, "let": 2, "const": 3}, "SwitchCase": 1 }],
+    "keyword-spacing": "warn",
+    "new-cap": ["warn", {"properties": false}],
+    "no-control-regex": 0,
+    "no-unused-vars": "warn",
+    "padded-blocks": ["warn", {"classes":"always"}],
+    "semi": ["error", "never"],
+    "space-before-function-paren": ["error", "never"],
+    "eol-last": 0,
+    "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 1 }],
+    "prefer-const": ["warn"],
+    "no-prototype-builtins": ["warn"],
+    "node/no-path-concat": ["warn"],
+    "array-callback-return": ["warn"],
+    "import/order": "off"
+  }
+}

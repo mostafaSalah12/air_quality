@@ -6,7 +6,7 @@ async function swaggerDocs(fastify, _options) {
     routePrefix: '/docs',
     swagger: {
       info: {
-        title: 'air-quality-api',
+        title: 'Air Quality Api',
         description: 'Air quality API documentation.',
         version: '1.0.0'
       },
@@ -17,9 +17,7 @@ async function swaggerDocs(fastify, _options) {
       schemes: ['http'],
       consumes: ['application/json'],
       produces: ['application/json'],
-      tags: [
-        // { name: 'user', description: 'User related end-points' }
-      ]
+      tags: []
     },
     uiConfig: {
       docExpansion: 'full',

@@ -5,7 +5,7 @@ const Faults = require('../utils/faults')
 
 async function getCityAirQuality(latitude, longitude) {
   const airQuality = await IQairService.getAirQualityNearestCity(latitude, longitude)
-  if (!airQuality || airQuality.status !== 'success') {
+  if (airQuality.status !== 'success') {
     logger.error({
       message: 'Error getting air quality',
       data: airQuality
@@ -37,11 +37,11 @@ async function getParisAirQuality() {
       .lean()
       .exec()
 
-    if (!airQuality || airQuality.length === 0) {
+    if (airQuality.length === 0) {
       logger.error({
         message: 'Error getting Paris air quality'
       })
-      Faults.throw('Error getting Paris air quality', 500)
+      Faults.throw('Error getting Paris air quality, No data found!', 404)
     }
 
     return {

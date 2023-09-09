@@ -8,13 +8,12 @@ async function startServer() {
   parisCronJob()
 
   const fastify = await buildFastify()
-  fastify.listen(config.PORT, (err, address) => {
-    if (err) {
-      fastify.log.error(err)
-      process.exit(1)
-    }
-    fastify.log.info(`Server listening on ${address}`)
-  })
+  try {
+    await fastify.listen({ port: config.PORT })
+  } catch (err) {
+    fastify.log.error(err)
+    process.exit(1)
+  }
 }
 
 startServer()

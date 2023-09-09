@@ -9,7 +9,7 @@ async function saveParisAirQuality() {
 
   try {
     const response = await IQairService.getAirQualityNearestCity(latitude, longitude)
-    if (!response || response.status !== 'success') {
+    if (response.status !== 'success') {
       logger.error('Error getting air quality from IQAir in cron job')
       return
     }

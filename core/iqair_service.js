@@ -17,10 +17,8 @@ async function getAirQualityNearestCity(latitude, longitude) {
   const request = createAirQualityRequest(latitude, longitude)
 
   try {
-    const { status, data = {} } = await axios(request)
-    if (status === 200) {
-      return data
-    }
+    const { data = {} } = await axios(request)
+    return data
   } catch (error) {
     logger.error({
       message: 'Error getting air quality',
@@ -29,6 +27,7 @@ async function getAirQualityNearestCity(latitude, longitude) {
     if (error.response && error.response.status === 400) {
       Faults.throw('Invalid latitude or longitude', 400)
     }
+    Faults.throw('Error getting air quality', 500)
   }
   return {}
 }

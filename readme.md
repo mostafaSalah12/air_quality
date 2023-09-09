@@ -48,7 +48,7 @@ app
 
 ### Using Docker Compose
 - Clone the repo
-- Add the API Key sent in the email to docker compose file in **IQAIR_API_KEY** environment variable
+- Add your API Key from iqair to docker compose file in **IQAIR_API_KEY** environment variable
 - Run `docker-compose up` in the root directory
 - The app will be running on `http://localhost:3000`
 
@@ -58,7 +58,7 @@ app
 - Rename **.env.example** to **.env**
 - make sure you have **mongo db** installed and running on port **27017**
 - Run `npm install` in the root directory
-- Add the API Key sent in the email to .env file in **IQAIR_API_KEY** environment variable
+- Add your API Key from iqair to .env file in **IQAIR_API_KEY** environment variable
 - Run `npm start` in the root directory
 - The app will be running on `http://localhost:3000`
 
